@@ -1,6 +1,7 @@
 package com.bcaf.ivan.FinalProject.Controller;
 
 import com.bcaf.ivan.FinalProject.Entity.Agency;
+import com.bcaf.ivan.FinalProject.Entity.Role;
 import com.bcaf.ivan.FinalProject.Entity.User;
 import com.bcaf.ivan.FinalProject.Request.RegisterRequest;
 import com.bcaf.ivan.FinalProject.Util.AgencyDao;
@@ -39,6 +40,7 @@ public class UserApiController {
     }
     @PostMapping("/createNewAccount")
     public HttpStatus createNewAccount(@RequestBody RegisterRequest registerRequest) {
+
         User user = new User();
         user.setFirstName(registerRequest.getFirstName());
         user.setLastName(registerRequest.getLastName());
